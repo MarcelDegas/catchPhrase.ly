@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/scripts/app.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/stylesheets/app.css">
+	<title>CatchPhrase.ly</title>
+</head>
+<body class="container">
+	<div>
+		<h1>CatchPhrase.ly</h1>
+	</div>
+	<div>
+		<form method="POST" action="/phrases" class = "form-inline" id="new-phrase-form">
+			<input name="word" type="text" class="form-control" id="word-input" placeholder="New Word">
+			<input name="definition" type="text" class="form-control" id="definition-input" placeholder="Definition">
+			<button type="submit" class="btn btn-default">Add</button>
+		</form>
+	</div>
+	<div>
+	<!-- underscore placeholder -->
+		<ul class="list-group" id="phrases-ul"></ul>
+	</div>
+	<!-- underscore template -->
+	<script type="text/template" id="phrases-template">
+		<div class="phrases"> 
+			<li> <%= word %></li>
+			<li> <%= definition %></li>
+		</div>
+</body>
+</html>
+
+
+
+  
